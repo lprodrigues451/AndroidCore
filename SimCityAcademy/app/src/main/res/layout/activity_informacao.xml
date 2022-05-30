@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".informacao.InformacaoActivity">
 
     <!-- TODO adicionar título da página -->
@@ -11,5 +12,34 @@
     <!-- TODO adicionar o textView para recuperar as médias do alune -->
     <!-- TODO adicionar o textView para exibir o calculo da média -->
     <!-- TODO adicionar o textView para exibir a mensagem de aprovação ou repovação -->
+
+    <TextView
+        android:id="@+id/tvNomeAlune"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome Alune"
+        android:textSize="24sp"
+        android:layout_margin="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMediaAlune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="média 9.0"
+        android:layout_marginTop="@dimen/margem_24"
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeAlune"
+        app:layout_constraintStart_toStartOf="@+id/tvNomeAlune"/>
+
+    <TextView
+        android:id="@+id/MediaAprovadouOuReprovado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alune aprovade!"
+        android:layout_marginTop="@dimen/margem_24"
+        app:layout_constraintStart_toStartOf="@+id/tvMediaAlune"
+        app:layout_constraintTop_toBottomOf="@+id/tvMediaAlune" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
